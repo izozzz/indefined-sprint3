@@ -545,7 +545,9 @@ main.login section.forms{
     font-weight: bolder;
 }
 main.register section.forms form,
-main.login section.forms form{
+main.login section.forms form,
+main.product-create section.forms form,
+main.product-edit section.forms form{
     width: 100%;
     background-image: linear-gradient(to right ,#ff523b,rgba(0, 0, 0, 0.9));
 }
@@ -605,7 +607,9 @@ main.login section.forms .carrousel{
     display: none;
 }
 main.register input,
-main.login input{
+main.login input, 
+main.product-create, 
+main.product-edit{
     border: 2px solid white;
     border-radius: 10px;
     margin-left: 0 auto;

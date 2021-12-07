@@ -55,124 +55,21 @@
                 </form>
                 <h3 class="desc-prod">Detalles del productos</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia culpa aliquam perspiciatis eaque quibusdam, hic distinctio error perferendis doloribus ab, nisi deserunt velit minima enim. Officiis laboriosam vero ullam autem?</p>
+            <div class="p-create">
+                <a href="/crear-producto"><button>Crear producto</button></a>
             </div>
+            <div class="p-modif">
+                <a href="/modificar-producto"><button>Modificar producto</button></a>
+            </div>
+            </div>
+
     </section>
 
     <h3>TAMBIEN TE PUEDE INTERESAR</h3>
-    <section class="sec-carrousel">
-        <i class="fas fa-arrow-left"></i>
-        <article class="product">
-                <img class= "img-more" src="/images/productos/remeras/remera2.1.jpg" alt="REMERA THE NEW OLD SCHOOL - CANALLA N1">
-                <div class="product-description">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p class="p-name">REMERA THE OLD SCHOOL <br> CANALLA N1</p>
-                    <p class="p-price">$2.750</p>
-                    <p class="p-descuentos">20% off</p>
-                    <a href="#"><button class="ver-btn">VER</button></a>
-                </div>
-            </article>
-            
-            <article class="product">
-                <img class= "img-more" src="/images/productos/remeras/remera3.1.jpg" alt="REMERA THE OLD SCHOOL CANALLA N4">
-                <div class="product-description">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p class="p-name">REMERA THE OLD SCHOOL <br> CANALLA N4</p>
-                    <p class="p-price">$2.750</p>
-                    <p class="descuentos">20% off</p>
-                    
-                    <a href="#"><button class="ver-btn">VER</button></a>
-                </div>
-            </article>
-
-            <article class="product">
-                <img class= "img-more" src="/images/productos/remeras/remera4.1.jpg" alt="REMERA THE OLD SCHOOL - CANALLA N6">
-                <div class="product-description">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p class="p-name">REMERA THE OLD SCHOOL <br> CANALLA N6</p>
-                    <p class="p-price">$2.750</p>
-                    <p class="descuentos">20% off</p>
-                    <a href="#"><button class="ver-btn">VER</button></a>
-                </div>
-            </article>
-
-            <article class="product">
-                <img class= "img-more" src="/images/productos/remeras/remera5.4.jpg" alt="REMERA ON">
-                <div class="product-description">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p class="p-name">REMERA ON</p>
-                    <p class="p-price">$2.750</p>
-                    <p class="descuentos">20% off</p>
-                    <a href="#"><button class="ver-btn">VER</button></a>
-                </div>
-            </article>
-        <article class="product">
-            <img src="/images/productos/accesorios/billetera-collar-azul.jpg" alt="billetera-collar-azul">
-        <div class="product-description">
-            <i class="fas fa-shopping-cart"></i>
-            <p class="p-name">nombre producto</p>
-            <p class="p-price">precio</p>
-            <p class="p-descuentos">20% off</p>
-            <a href="#"><button class="ver-btn">VER</button></a>
-        </div>
-    </article>
-
-    <article class="product">
-            <img src="/images/productos/accesorios/tapaboca-trady-blanco.jpg" alt="tapaboca-trady-blanco">
-        <div class="product-description">
-            <i class="fas fa-shopping-cart"></i>
-            <p class="p-name">nombre producto</p>
-            <p class="p-price">precio</p>
-            <p class="p-descuentos">20% off</p>
-            <a href="#"><button class="ver-btn">VER</button></a>
-        </div>
-    </article>
-        
-    <i class="fas fa-arrow-right"></i>
-    </section>
-    <section class="ver-mas">
-        <p>Ver más productos</p>
-        <button type="submit"><i class="fas fa-arrow-down"></i></button>
-    </section>
+    <%- include("partials/sec-carrousel") %> 
 
     </main>
 
-    
-
-    <footer>
-        <div class="futer">
-            <section class="products-footer">
-                <h5>Productos</h5>
-                <div class="product-list">
-                    <p>Remeras</p>
-                    <p>Pantalones</p>
-                    <p>Abrigos</p>
-                    <p>Accesorios</p>
-                </div>
-            </section>
-            <section class="social-medias">
-                <h5>Seguinos</h5>
-                <div class="social-links">
-                    <div><a href="#"><i class="fab fa-facebook"></i></a></div>
-                    <div><a href="#"><i class="fab fa-instagram"></i></a></div>
-                    <div><a href="#"><i class="fab fa-whatsapp"></i></a></div>
-                </div>
-            </section>
-            <section class="contact-footer">
-                <h5>Contactanos</h5>
-                <div class="contact-links">
-                    <div><i class="far fa-envelope"></i><a href="#"> xperson@indefined.com</a></div>
-                    <div><i class="fab fa-whatsapp"></i><a href="#"> +54 (011) 2222-4444</a></div>
-                    <div><i class="fas fa-map-marker-alt"></i><a href="#"> CABA - Argentina</a></div>
-                
-                
-                
-            </div>
-            </section>
-        </div>
-        <section class="copy-right">
-            <p>© Copyright Indefined - 2021</p>
-        </section>
-
-    </footer>
+    <%- include("partials/footer") %> 
 </body>
 </html>
