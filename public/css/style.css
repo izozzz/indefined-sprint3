@@ -12,10 +12,6 @@ a{
     text-decoration: none;
     color:white;
 }
-main{
-    margin: 0 auto;
-    width: 90%;
-}
 section.sec-carrousel i.fas.fa-arrow-left, 
 section.sec-carrousel i.fas.fa-arrow-right{
     display: none;
@@ -24,6 +20,8 @@ section.sec-carrousel{
     padding: 10px 5px;
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    margin: 0px auto;
 }
 section.sec-carrousel article.product{
     border: 1px solid black;
@@ -164,6 +162,7 @@ header #menu .burger-menu{
     width: 80%;
     border:none;
     border-radius: 5px;
+    padding: 0px 5px
 }
 #menu ul li .form-serch-desplegable button{
     width: 20%;
@@ -179,7 +178,7 @@ header #menu .burger-menu{
     position:absolute;
     top:100%;
     left:0px;
-    background-color:black;
+    background-color:rgba(0, 0, 0, 0.9);
     padding:0;
 }
 #menu ul li:hover > ul {
@@ -364,6 +363,10 @@ main.product-cart article.medios-envio, section.resumen-compra{
     text-align: center;
     border: 1.5px solid #ff523b;
 }
+main.product-cart section.resumen-compra{
+    background-color:rgba(0, 0, 0, 0.8);
+    color: white;
+}
 main.product-cart article.medios-envio .calc-envio{
     background-color: black;
     color: #fff;
@@ -372,19 +375,19 @@ main.product-cart article.medios-envio .calc-envio{
     font-weight: bolder;
 }
 main.product-cart article.medios-envio .cod-postal, .calc-envio{
-    border:none;
+    border:1px solid rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     height: 26px;
     padding: 0px 5px;
 }
 main.product-cart section.resumen-compra{
-    border-radius: 15px;
+    border-radius: 15px 50px;
 }
 main.product-cart section.resumen-compra article{
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    border-top: 1px solid black;
+    border-top: 1px solid #ff523b;
     justify-content: space-between;
 }
 main.product-cart section.resumen-compra article.cuotas{
@@ -395,16 +398,19 @@ main.product-cart section.resumen-compra article.cuotas{
 main.product-cart section.resumen-compra .iniciar-compra{
     border:none;
     border-radius: 8px;
-    height: 15%;
+    height: 30px;
     padding: 5px 10px;
     color: white;
     background-color: black;
     width: 50%;
     text-transform: uppercase;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
+    box-shadow: 0px 0px 10px rgb(255 255 255);
     font-weight: bolder;
 }
-main.product-cart section.resumen-compra a,
+main.product-cart section.resumen-compra a{
+    color: white;
+    font-weight: bolder;
+}
 main.product-cart article.medios-envio div p{
     color: black;
     font-weight: bolder;
@@ -500,11 +506,25 @@ main.product-detail section.container .columna-desc form button{
     background-color: black;
     padding: 10px 0px;
     margin:10px;
+    width: 40%;
 }
 main.product-detail section.container .columna-desc p{
     max-width: 300px;
     text-align: justify;
     margin: 2px auto;
+}
+main.product-detail section.container .columna-desc .p-create button,
+main.product-detail section.container .columna-desc .p-modify button{
+    height: 30px;
+    border: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    color: white;
+    background-color: #ff523b;
+    padding: 10px 0px;
+    margin:10px;
+    width: 40%;
 }
 main.product-detail h3{
     padding: 10px;
@@ -522,13 +542,26 @@ hr{
     padding-bottom: 5px;
     border: none;
 }
+/* ========================= MAIN PRODUCT-CREATE / PRODUCT-EDIT ========================= */
+main.product-create,
+main.product-edit{
+width:80%;
+margin: 0 auto;
+}
+main.product-create section.forms .product-desc input,
+main.product-edit section.forms .product-desc input{
+height:80px;
+text-align: left;
+}
 /* ========================= MAIN REGISTER / LOGIN ========================= */
 main.register a, main.login a{
     font-weight: bolder;
     color: black;
 }
 main.register .titulos,
-main.login .titulos{
+main.login .titulos,
+main.product-create .titulos,
+main.product-edit .titulos{
     text-align: center;
     font-family: Bebas neue;
     margin: 20px 0px;
@@ -536,7 +569,9 @@ main.login .titulos{
     font-weight:bolder;
 }
 main.register section.forms,
-main.login section.forms{
+main.login section.forms,
+main.product-create section.forms,
+main.product-edit section.forms{
     display: flex;
     flex-wrap: nowrap;
     padding: 10px;
@@ -550,11 +585,18 @@ main.product-create section.forms form,
 main.product-edit section.forms form{
     width: 100%;
     background-image: linear-gradient(to right ,#ff523b,rgba(0, 0, 0, 0.9));
+    border-radius: 20px 5px;
+    padding: 20px;
+    margin:10px;
+
 }
 main.register section.forms div,
-main.login section.forms div{
-    width: 100%;
+main.login section.forms div,
+main.product-create section.forms div,
+main.product-edit section.forms div{
+    width: 80%;
     padding: 5px;
+    margin:0px auto;
 }
 main.register section.forms .google,
 main.register section.forms .facebook,
@@ -568,7 +610,6 @@ main.register section.forms .google button,
 main.register section.forms .facebook button,
 main.login section.forms .google button,
 main.login section.forms .facebook button{
-        
         border:1px solid black;
         background-color:#fff;
         border-radius:10px;
@@ -576,15 +617,22 @@ main.login section.forms .facebook button{
         height:20px;
     }
 main.register section.forms input,
-main.login section.forms input{
+main.login section.forms input,
+main.product-create section.forms input,
+main.product-edit section.forms input{
     display: flex;
     width: 100%;
+    margin: 0px 10px;
+    padding: 0px 15px
+    
 }
 main.register section.forms .submit,
-main.login section.forms .submit{
+main.login section.forms .submit,
+main.product-create section.forms .submit,
+main.product-edit section.forms .submit{
     display: block;
     padding: 20px;
-    width: 100%;
+    width: 80%;
 }
 main.register section.forms .submit label,
 main.login section.forms .submit label{
@@ -594,7 +642,9 @@ main.login section.forms .submit label{
     width: 100%;
 }
 main.register section.forms .submit button,
-main.login section.forms .submit button{
+main.login section.forms .submit button,
+main.product-create section.forms .submit button,
+main.product-edit section.forms .submit button{
     border:1px solid white;
     height: 30px;
     background-color: black;
@@ -608,8 +658,8 @@ main.login section.forms .carrousel{
 }
 main.register input,
 main.login input, 
-main.product-create, 
-main.product-edit{
+main.product-create input, 
+main.product-edit input{
     border: 2px solid white;
     border-radius: 10px;
     margin-left: 0 auto;
@@ -624,6 +674,11 @@ main.login .a-register{
 /* ========================= MAIN LOGIN ========================= */
 main.login section.forms form{
     width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
 }
 /* ========================= FOOTER ========================= */
 footer{
@@ -676,10 +731,7 @@ footer section.copy-right{
 
 @media( min-width:361px){
     /* ========================= HEADER ========================= */
-    main.index  {
-        width: 80%;
-        margin: 0px auto;
-    }
+    
     header .top-header{
         font-size: 24px;
         display: flex;
@@ -698,6 +750,12 @@ footer section.copy-right{
         width: 15%;
         justify-content: center;
     }
+    header .top-header .form-serch-header{
+        width: 50%;
+        border:none;
+        border-radius: 5px;
+        padding: 0px 15px;
+    }
     header .top-header .form-serch-header form{
         width: 100%;
         display: flex;
@@ -707,12 +765,12 @@ footer section.copy-right{
         height: 30px;
     }
     header .top-header .form-serch-header input{
-        width: 80%;
-        border:none;
         border-radius: 5px;
+        width: 90%;
+        padding: 0px 10px;
     }
     header .top-header .form-serch-header button{
-        width: 20%;
+        width: 10%;
         border:none;
         border-radius: 5px;
     }
@@ -731,8 +789,8 @@ footer section.copy-right{
         letter-spacing: 2px;
     }
     /* ========================= MAIN PRODUCT CART ========================= */
-    main.product-cart  {
-        width: 80%;
+    main.product-cart{
+        width: 75%;
         margin: 0px auto;
     }
     main.product-cart section.sec-carrousel i.fas.fa-arrow-left, 
@@ -823,6 +881,10 @@ footer section.copy-right{
         color:#ff523b;
     }
     /* ========================= MAIN INDEX ========================= */
+    main.index{
+        width: 75%;
+        margin: 0px auto;
+    }
     main.index .sec-categorys article{
         width: 48%;
     }
@@ -837,15 +899,21 @@ footer section.copy-right{
         background-color: #ff523b;
     }
     /* ========================= MAIN REGISTER ========================= */
-    main.register{
-        width: 80%;
+    main.register,
+    main.login{
+        width: 60%;
         margin: 0px auto;
     }
     main.register section.forms,main.register section.a-login{
         font-size: 16px;
     }
     /* ========================= MAIN PRODUCT DETAIL =========================== */
-    
+    main.product-create,
+    main.product-edit{
+    max-width:350px;
+    height:auto;
+    margin: 0 auto;
+    }
     /* ========================= FOOTER ========================= */
     footer .futer p, footer .futer i,footer .futer a{
         font-size: 14px;
@@ -876,6 +944,7 @@ footer section.copy-right{
         transform: translateY(0px);
         opacity: 1;
     }
+    
     /* ========================= HEADER========================= */
     header .top-header{
         font-size: 30px;
@@ -1023,13 +1092,19 @@ footer section.copy-right{
     main.product-cart section.ver-mas{
         display: none;
     }
+    main.product-create,
+main.product-edit{
+max-width:500px;
+height:auto;
+margin: 0 auto;
+}
     /* ========================= MAIN REGISTER ========================== */
     main.register section.forms div{
         width: 80%;
     }
     main.register section.forms form{
         margin:5px;
-        width: 40%;
+        width: 70%;
         justify-content: center;
         display: flex;
         flex-wrap: nowrap;
@@ -1058,7 +1133,9 @@ footer section.copy-right{
         width: 100%;
         height: auto;
     }
-    main.register section.forms,main.register section.a-login{
+    main.register section.forms,
+    main.register section.a-login,
+    main.login section.forms,main.login section.a-register{
         font-size: 20px;
     }
 

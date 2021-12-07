@@ -27,11 +27,12 @@
                 <form action="/" method="GET">
                     <div class="elec-talle-color">
                         <div class="elec-talle">
-                        <label for="prod-talle">Talle:</label>
-                            <select name="prod-talle" id="prod-talle">
-                                <option value="s" selected>  XS </option>
-                                <option value="m">  S </option>
-                                <option value="l">  M </option>
+                        <label for="prod-size">Talle:</label>
+                            <select name="prod-size" id="prod-size">
+                                <option value="xs" selected>  XS </option>
+                                <option value="s">  S </option>
+                                <option value="m">  M </option>
+                                <option value="l">  L </option>
                                 <option value="xl"> XL </option>
                             </select>
                         </div>
@@ -54,19 +55,20 @@
                         <button type="submit">Agregar al carrito</button>
                 </form>
                 <h3 class="desc-prod">Detalles del productos</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia culpa aliquam perspiciatis eaque quibusdam, hic distinctio error perferendis doloribus ab, nisi deserunt velit minima enim. Officiis laboriosam vero ullam autem?</p>
-            <div class="p-create">
-                <a href="/crear-producto"><button>Crear producto</button></a>
-            </div>
-            <div class="p-modif">
-                <a href="/modificar-producto"><button>Modificar producto</button></a>
-            </div>
+                <p>Esta prenda posee tencnología HIDROWICK
+                    Disipa la transpiración evitando el reingreso de humedad en la piel y en la prenda
+                    Regula la temperatura corporal y facilita la transpiracion de la piel 
+                    Costuras planas</p>
+                <div class="p-create">
+                    <a href="/crear-producto"><button>Crear producto</button></a>
+                </div>
+                <div class="p-modify">
+                    <a href="/modificar-producto"><button>Editar producto</button></a>
+                </div>
             </div>
 
     </section>
 
-    <h3>TAMBIEN TE PUEDE INTERESAR</h3>
-    <%- include("partials/sec-carrousel") %> 
 
     </main>
 
